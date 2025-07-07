@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote Generator</title>
+  <style>
+    
+    body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* this centers children horizontally */
+  justify-content: center; /* centers vertically too */
+  min-height: 100vh;
+  /* other styles */
+}
+
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+button {
+  background-color: #0c2341;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 0;  /* <-- change here */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.6);
+  margin-bottom: 30px;
+  user-select: none;
+}
+button {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  border-radius: 0;
+  /* ...other styles */
+}
+
+    button:hover {
+      background-color: #ff4757;
+    }
+
+    #quote {
+      font-size: 1.8rem;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      min-height: 60px; /* to keep space when empty */
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Quote Generator</h1>
+  <button onclick="getQuote()">Get Quote</button>
+  <p id="quote"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
